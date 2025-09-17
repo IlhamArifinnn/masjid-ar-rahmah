@@ -46,7 +46,7 @@ header {
 }
 
 nav {
-  background-color: rgba(13, 141, 64, 0.95);
+  background-color: rgba(8, 104, 29, 0.95);
   padding: 1rem 0;
   position: fixed;
   top: 0;
@@ -156,19 +156,19 @@ nav {
   display: inline-block;
   background-color: var(--accent);
   border: none;
-  color: white;
+  color: #eee;
   padding: 1.1rem 3rem;
   border-radius: 10px;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(217, 163, 74, 0.3);
+  box-shadow: 0 4px 15px rgba(245, 208, 44, 0.3);
 }
 
 .btn:hover {
   background-color: var(--accent-dark);
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(217, 163, 74, 0.4);
+  box-shadow: 0 6px 20px rgba(245, 208, 44, 0.4);
 }
 
 /* Section Styles */
@@ -530,12 +530,12 @@ tr:hover {
 
 .payment-option:hover {
   border-color: var(--primary);
-  background-color: rgba(13, 141, 64, 0.05);
+  background-color: rgba(8, 104, 29, 0.05);
 }
 
 .payment-option.selected {
   border-color: var(--primary);
-  background-color: rgba(13, 141, 64, 0.1);
+  background-color: rgba(8, 104, 29, 0.1);
 }
 
 .payment-option i {
@@ -570,7 +570,7 @@ tr:hover {
 .form-group textarea:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(13, 141, 64, 0.1);
+  box-shadow: 0 0 0 3px rgba(8, 104, 29, 0.1);
 }
 
 .animal-options {
@@ -584,7 +584,7 @@ tr:hover {
 .note {
   background-color: #fff3cd;
   padding: 0.75rem 1rem;
-  border-left: 4px solid #ffc107;
+  border-left: 4px solid var(--accent);
   margin-top: 0.5rem;
   font-size: 0.9rem;
   border-radius: 4px;
