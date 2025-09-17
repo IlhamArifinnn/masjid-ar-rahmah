@@ -93,10 +93,18 @@ tabBtns.forEach((btn) => {
 // Mobile menu toggle
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
+const body = document.querySelector("body");
 
 hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("active");
   hamburger.classList.toggle("active");
+
+  // Prevent body scrolling when menu is open
+  if (navLinks.classList.contains("active")) {
+    body.style.overflow = "hidden";
+  } else {
+    body.style.overflow = "auto";
+  }
 });
 
 // Close mobile menu when clicking on a link
@@ -104,7 +112,21 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
   link.addEventListener("click", () => {
     navLinks.classList.remove("active");
     hamburger.classList.remove("active");
+    body.style.overflow = "auto"; // Re-enable scrolling
   });
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener("click", (e) => {
+  if (
+    navLinks.classList.contains("active") &&
+    !e.target.closest(".nav-links") &&
+    !e.target.closest(".hamburger")
+  ) {
+    navLinks.classList.remove("active");
+    hamburger.classList.remove("active");
+    body.style.overflow = "auto";
+  }
 });
 
 // Initialize page
